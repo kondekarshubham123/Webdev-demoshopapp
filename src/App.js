@@ -1,6 +1,7 @@
 import './App.css';
 import Item from './components/Item';
 import ItemDate from './components/ItemDate';
+import Card from './components/Card';
 
 function App() {
   const response = 
@@ -26,17 +27,20 @@ function App() {
 
   return (
     <div>
-      <Item name={response[0].itemName}></Item>
-      <ItemDate day={response[0].itemDate} month={response[0].itemMonth} year={response[0].ItemYear}></ItemDate>
+      <Card>
+        <Item name={response[0].itemName}>
+          hello jee m hun aap ki first item
+        </Item>
+        <ItemDate day={response[0].itemDate} month={response[0].itemMonth} year={response[0].ItemYear}></ItemDate>
 
-      <Item name={response[1].itemName}></Item>
-      <ItemDate day={response[1].itemDate} month={response[1].itemMonth} year={response[1].ItemYear}></ItemDate>
+        <Item name={response[1].itemName}></Item>
+        <ItemDate day={response[1].itemDate} month={response[1].itemMonth} year={response[1].ItemYear}></ItemDate>
 
-      <Item name={response[2].itemName}></Item>
-      <ItemDate day={response[2].itemDate} month={response[2].itemMonth} year={response[2].ItemYear}></ItemDate>
+        <Item name={response[2].itemName}></Item>
+        <ItemDate day={response[2].itemDate} month={response[2].itemMonth} year={response[2].ItemYear}></ItemDate>
 
-      <div className="App">Hello jee</div>
-
+        <div className="App">Hello jee</div>
+      </Card>
     </div>
   );
 }
